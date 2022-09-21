@@ -64,4 +64,47 @@ function setPresentation(){
 	p_ind = p_ind+1;
 }
 
+function setPresentation1(){
+	offset = 0;
+	switch (p_ind) {
+		case 0:
+			offset = updateText('id_p7a','Apply now to receive your no obligation quote.',offset,CHAT_MEDIUM);
+			updateText('id_p7b','-I think you’ll be pleasantly surprised with your experience.',offset,CHAT_MEDIUM,setPresentation1,SLIDE_DELAY);
+			
+			break;
+	}	
+	
+	if( p_ind < 1){	
+		// If Error Handle is ok
+		document.getElementById('id_presentation'+1).classList.toggle('hidden');
+		document.getElementById('id_presentation'+7).classList.toggle('hidden');
+	}
+	else{
+
+		document.getElementById('id_b1').classList.toggle('active');
+		
+		setTimeout(function(){
+			document.getElementById('id_b1').classList.toggle('active');
+			document.getElementById('id_b2').classList.toggle('active');
+		},2000);
+		
+		setTimeout(function(){
+			document.getElementById('id_b2').classList.toggle('active');
+			document.getElementById('id_b3').classList.toggle('active');
+		},4000);
+		
+		setTimeout(function(){
+			document.getElementById('id_b3').classList.toggle('active');
+// 			document.getElementById('id_b4').classList.toggle('active');
+		},6000);
+		
+// 		setTimeout(function(){
+// 			document.getElementById('id_b4').classList.toggle('active');
+// 			document.getElementById('id_step1').classList.toggle('active');
+// 		},8000);
+	}
+	
+	p_ind = p_ind+1;
+}
+
 checkLoad();
