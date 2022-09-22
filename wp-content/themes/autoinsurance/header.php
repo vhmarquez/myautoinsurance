@@ -30,19 +30,19 @@
 
 	<header id="masthead" class="site-header">
 		<div class="grid">
-			<div class="site-branding col-desk-6 col-mob-6">
+			<div class="site-branding col-desk-12 col-mob-4">
 				<?php
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) :
 					?>
-<!-- 					<span class="material-icons">&#xe531;</span> -->
-					<img class = "jon-logo" src = "/wp-content/themes/autoinsurance/images/logo.png"/>
+					<span class="material-icons">&#xe531;</span>
+					<!-- <img class="jon-logo" src = "/wp-content/themes/autoinsurance/images/logo.png"/> -->
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php
 				else :
 					?>
-<!-- 					<span class="material-icons">&#xe531;</span> -->
-					<img class = "jon-logo" src = "/wp-content/themes/autoinsurance/images/logo_FL.png"/>
+					<span class="material-icons">&#xe531;</span>
+					<!-- <img class="jon-logo" src = "/wp-content/themes/autoinsurance/images/logo_FL.png"/> -->
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 					<?php
 				endif;
@@ -53,10 +53,6 @@
 				<?php endif; ?>
 			</div>
 			<!-- .site-branding -->
-			<!-- <div class="site-cta col-desk-6 col-mob-6">
-				<span class="material-icons">&#xe551;</span>
-				<p class="cta">Talk to an Agent: 1-800-123-456</p>
-			</div>-->
 
 			<!--<nav id="site-navigation" class="main-navigation cold-desk-6 col-mob-6">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'autoinsurance' ); ?></button>
