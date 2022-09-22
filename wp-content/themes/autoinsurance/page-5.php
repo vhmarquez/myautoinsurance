@@ -21,46 +21,7 @@ get_header();
 			<div class="grid" >
 				<div id="id_col1" class="col-desk-6 col-mob-4">
 					<h2 class="center">Shop Affordable Car Insurance</h2>
-					<div class="presentation">
-						<div id = "id_presentation1" class="wrapper">
-							<img class="item-background" src="/wp-content/themes/autoinsurance/images/presentation1.png"/>
-			
-							<div id="id_p1a" class="item-text t1a"></div>
-							<div id="id_p1b" class="item-text t1b"></div>
-						</div>
-						<div id = "id_presentation2" class = "wrapper hidden">
-							<img class="item-background" src="/wp-content/themes/autoinsurance/images/presentation2.png"/>
-			
-							<div id = "id_p2" class="item-text t2"></div>
-						</div>
-						<div id = "id_presentation3" class = "wrapper hidden">
-							<img class="item-background" src="/wp-content/themes/autoinsurance/images/presentation3.png"/>
-			
-							<div id = "id_p3" class="item-text t3"></div>
-						</div>
-						<div id = "id_presentation4" class = "wrapper hidden">
-							<img class="item-background" src="/wp-content/themes/autoinsurance/images/presentation4.png"/>
-			
-							<div id = "id_p4" class="item-text t4"></div>
-						</div>
-						<div id = "id_presentation5" class = "wrapper hidden">
-							<img class="item-background" src="/wp-content/themes/autoinsurance/images/presentation5.png"/>
-			
-							<div id = "id_p5" class="item-text t5"></div>
-						</div>
-						<div id = "id_presentation6" class = "wrapper hidden">
-							<img class="item-background" src="/wp-content/themes/autoinsurance/images/presentation6.png"/>
-			
-							<div id = "id_p6" class="item-text t6"></div>
-						</div>
-						<div id = "id_presentation7" class = "wrapper hidden">
-							<img class="item-background" src="/wp-content/themes/autoinsurance/images/presentation7.png"/>
-			
-							<div id = "id_p7a" class="item-text t7a"></div>
-							<div id = "id_p7b" class="item-text t7b"></div>
-						</div>
-						<span class="material-icons button_right hidden"onclick = ""> chevron_right </span>
-					</div>
+					
 				</div>
 				<div id="id_col2" class="col-desk-6 col-mob-4 middle">
 					<div id="id_step1" onclick="setCallState(1)">

@@ -7,7 +7,6 @@ var load_trigger = 0; // Load state
 // Load the files
 loadFun(path + 'form_state.js');
 loadFun(path + 'chat_bot.js');
-loadFun(path + 'presentation.js');
 
 document.addEventListener("DOMContentLoaded", function() {
     checkLoad();
@@ -18,8 +17,6 @@ var v_year = document.getElementById('id_vehicle_year').lastElementChild.lastEle
 
 function startApp() {
     console.log((new Date()).toUTCString());
-
-    setPresentation1();
 
     // hide values
     for (i = 2; i <= 6; i++) {
@@ -113,7 +110,7 @@ function loadFun(filename) {
 function checkLoad() {
     load_trigger += 1;
 
-    if (load_trigger == 4) {
+    if (load_trigger == 3) {
         startApp();
     }
 }
