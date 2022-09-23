@@ -26,9 +26,8 @@ textarea {
 
 label {
     display: block;
-    text-align: left;    
+    text-align: left;
     color: #888;
-	
 }
 
 select {
@@ -44,4 +43,65 @@ select {
 
 textarea {
     width: 100%;
+}
+
+.acf-fields.-border {
+    border: 1px solid #eee !important;
+}
+
+.acf-field input[type=text],
+.acf-field input[type=password],
+.acf-field input[type=date],
+.acf-field input[type=datetime],
+.acf-field input[type=datetime-local],
+.acf-field input[type=email],
+.acf-field input[type=month],
+.acf-field input[type=number],
+.acf-field input[type=search],
+.acf-field input[type=tel],
+.acf-field input[type=time],
+.acf-field input[type=url],
+.acf-field input[type=week],
+.acf-field textarea,
+.acf-field select {
+    border-radius: .25rem !important;
+    border: 1px solid #d8dee6 !important;
+    line-height: 1.875rem !important;
+    min-height: 3rem;
+    &:active,
+    &:focus,
+    &:focus-visible {
+        border-color: #1b96ff !important;
+    }
+}
+
+.acf-form-fields .acf-field-group .acf-label label {
+    font-weight: 700 !important;
+    font-size: 16px !important;
+}
+
+.acf-form-fields .acf-field-group .acf-input label {
+    font-weight: 400 !important;
+    font-size: 14px;
+}
+
+.acf-label {
+    margin-bottom: .125rem !important;
+}
+
+.acf-field .acf-label label {
+    padding-left: .25rem !important;
+    font-size: .75rem !important;
+    font-weight: 400 !important;
+    color: $color__secondary !important;
+}
+
+.acf-row-handle {
+    display: none !important;
+}
+
+.acf-repeater>table,
+.acf-table>thead>tr>th,
+.acf-table>tbody>tr>td {
+    border: 0 !important;
 }

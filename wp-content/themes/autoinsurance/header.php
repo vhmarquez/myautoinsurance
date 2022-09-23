@@ -30,19 +30,18 @@
 
 	<header id="masthead" class="site-header">
 		<div class="grid">
-			<div class="site-branding col-desk-12 col-mob-4">
+			<div class="site-branding col-desk-4 col-mob-4">
+				
+			</div>
+			<div class="site-cta col-desk-4 col-mob-4">
 				<?php
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) :
 					?>
-					<span class="material-icons">&#xe531;</span>
-					<!-- <img class="jon-logo" src = "/wp-content/themes/autoinsurance/images/logo.png"/> -->
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php
 				else :
 					?>
-					<span class="material-icons">&#xe531;</span>
-					<!-- <img class="jon-logo" src = "/wp-content/themes/autoinsurance/images/logo_FL.png"/> -->
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 					<?php
 				endif;
@@ -51,6 +50,8 @@
 					?>
 					<p class="site-description"><?php echo $autoinsurance_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 				<?php endif; ?>
+			</div>
+			<div class="site-social col-desk-4 col-mob-4">
 			</div>
 			<!-- .site-branding -->
 
@@ -67,5 +68,13 @@
 			</nav>--> <!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
+
+	<section class="section site-sub-header bg-blue">
+		<div class="grid">
+			<div class="col-desk-12 col-mob-4">
+				<h2 class="center">Shop Affordable Car Insurance</h2>
+			</div>
+		</div>
+	</section>
 
 	<div id="content" class="site-content">

@@ -8,6 +8,9 @@ input[type="submit"],
     border-radius: 6px;
     background: $color__background-button;
     color: $color__text-button !important;
+    display: inline-block;
+    min-width: 200px;
+    text-align: center;
     @include font-size(1);
     line-height: 1;
     padding: 1em 1.4em;

@@ -19,104 +19,100 @@ get_header();
 	<main id="main" class="site-main" >
 		<div id = "id_hero" class="section hero-section" >
 			<div class="grid" >
-				<div id="id_col1" class="col-desk-6 col-mob-4">
-					<h2 class="center">Shop Affordable Car Insurance</h2>
-					
-				</div>
-				<div id="id_col2" class="col-desk-6 col-mob-4 middle">
-					<div id="id_step1" onclick="setCallState(1)">
-						Step 1: Fill Out a Short Form
-					</div>
+				<div id="id_col2" class="col-desk-8 col-mob-4 middle">
 					<div id="form1" class="">
-						<div class="button_wrap">
-							<div class="header_wrap" >
+						<div class="grid">
+							<div class="form-arrow col-desk-4 col-mob-1">
 								<span id="id_back" class="material-icons button1 hidden" onclick="setFormState(0)" title="Previous Page"> chevron_left </span>
+							</div>
+							<div class="form-title col-desk-4 col-mob-2">
+								<!-- <h4 id="id_step1" onclick="setCallState(1)" style="margin: 0;">Step 1: Fill Out a Short Form</h4> -->
+							</div>
+							<div class="form-page col-desk-4 col-mob-1">
 								<div id="id_page" class="page_number">page 1/4</div>
-							</div>									
+							</div>
 						</div>
-						<div id="" class="">
 							<?php
 							
-								acf_form_head(); 
-								//get_header(); 
-								
-								while (have_posts()): the_post();
-									acf_form(
-										array(
-											'post_id' => 'new_post',
-											'new_post' => array(
-												'post_type'		=> 'auto-lead'
-											),
-											'form' => true,
-											'post_status' => 'publish',
-											'post_title' => false,
-											'html_before_fields' => '<div class="col-desk-12 col-mob-12">',
-											'html_after_fields' => '</div>',
-											'honeypot' => true,
-											'kses' => true,
-											'submit_value' => 'Submit Application',
-											'updated_message' => _("Thanks for submitting your application"),
-											'return' => '/redirect/'
-										)
-									);
+							acf_form_head(); 
+							//get_header(); 
+							
+							while (have_posts()): the_post();
+								acf_form(
+									array(
+										'post_id' => 'new_post',
+										'new_post' => array(
+											'post_type'		=> 'auto-lead'
+										),
+										'form' => true,
+										'post_status' => 'publish',
+										'post_title' => false,
+										'html_before_fields' => '',
+										'html_after_fields' => '',
+										'honeypot' => true,
+										'kses' => true,
+										'submit_value' => 'Submit Application',
+										'updated_message' => _("Thanks for submitting your application"),
+										'return' => '/redirect/'
+									)
+								);
 
-								endwhile;
-								
-								//Add ACF Front End Content Submission Form
-								function my_pre_save_post( $post_id )
-								{
-									$fields = get_fields($post_id);
-									// create new lead message
-									$message = 
-										"New Lead<br>".
-										'Lead Information<br>'.'<br>'.
-										'Lead ID: '.$post_id.'<br>'.
-										'Lead Type: Personal'.'<br>'.
-										'Date Received: '.date("d/m/y").'<br>'.
-										'Time Received: '.date("h:i:sa").'<br>'.
-										'<br>'.
-										'Contact Information<br>'.'<br>'.
-										'Name: '.$fields[0]->$value.' '.$fields[1]->$value.'<br>'.
-										'Email: '.$fields[2]->$value.'<br>'.
-										'Phone: '.$fields[3]->$value.'<br>'.	
-										'DoB: '.$fields[4]->$value.'<br>'.
-										'Address: '.$fields[5]->$value.'<br>'.
-										'<br>';
-										// 'Vehicles and Drivers'.'<br>'.
-										// 'Vehicles: '.$vehicles.'<br>'.
-										// 'Drivers: '.$data->d_first_name.' '.$data->d_last_name.'<br>'.
-										// '<br>'.
-										// 'Extra Information<br>'.
-										// 'Accidents within the last 3 years: '.$option_accidents[$data->accidents].'<br>'.
-										// 'Current DUI\'s, FR44, or SR22: '.$option_dui[$data->dui].'<br>'.
-										// 'Current Insurance Company: '.$option_insurance[$data->current_insurance].'<br>'.
-										// 'Insured for more than a year?: '.$option_insured[$data->insured].'<br>'.
-										// 'Marital Status: '.$option_marital[$data->marital_status].'<br>'.
-										// 'Do you rent or own your home?: '.$option_rent[$data->rent].'<br>'.
-										// 'Home Property Type: '.$option_home[$data->home_type].'<br>'.
-										// 'Credit Rating: '.$option_credit[$data->credit].'<br>'.
-										// 'Personal Liabiliy: '.$option_liability [$data->liability].'<br>';
+							endwhile;
+							
+							//Add ACF Front End Content Submission Form
+							function my_pre_save_post( $post_id )
+							{
+								$fields = get_fields($post_id);
+								// create new lead message
+								$message = 
+									"New Lead<br>".
+									'Lead Information<br>'.'<br>'.
+									'Lead ID: '.$post_id.'<br>'.
+									'Lead Type: Personal'.'<br>'.
+									'Date Received: '.date("d/m/y").'<br>'.
+									'Time Received: '.date("h:i:sa").'<br>'.
+									'<br>'.
+									'Contact Information<br>'.'<br>'.
+									'Name: '.$fields[0]->$value.' '.$fields[1]->$value.'<br>'.
+									'Email: '.$fields[2]->$value.'<br>'.
+									'Phone: '.$fields[3]->$value.'<br>'.	
+									'DoB: '.$fields[4]->$value.'<br>'.
+									'Address: '.$fields[5]->$value.'<br>'.
+									'<br>';
+									// 'Vehicles and Drivers'.'<br>'.
+									// 'Vehicles: '.$vehicles.'<br>'.
+									// 'Drivers: '.$data->d_first_name.' '.$data->d_last_name.'<br>'.
+									// '<br>'.
+									// 'Extra Information<br>'.
+									// 'Accidents within the last 3 years: '.$option_accidents[$data->accidents].'<br>'.
+									// 'Current DUI\'s, FR44, or SR22: '.$option_dui[$data->dui].'<br>'.
+									// 'Current Insurance Company: '.$option_insurance[$data->current_insurance].'<br>'.
+									// 'Insured for more than a year?: '.$option_insured[$data->insured].'<br>'.
+									// 'Marital Status: '.$option_marital[$data->marital_status].'<br>'.
+									// 'Do you rent or own your home?: '.$option_rent[$data->rent].'<br>'.
+									// 'Home Property Type: '.$option_home[$data->home_type].'<br>'.
+									// 'Credit Rating: '.$option_credit[$data->credit].'<br>'.
+									// 'Personal Liabiliy: '.$option_liability [$data->liability].'<br>';
 
-									// echo json_encode($message);
+								// echo json_encode($message);
 
-									$subject = "New Lead";
-									$to = "sleep@knights.ucf.edu";
-									$from = "help@myfloridaauto.com";
-									$headers = "MIME-Version: 1.0" . "\r\n";
-									$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-									$headers .= 'From: <'.$from.'>' . "\r\n";
+								$subject = "New Lead";
+								$to = "sleep@knights.ucf.edu";
+								$from = "help@myfloridaauto.com";
+								$headers = "MIME-Version: 1.0" . "\r\n";
+								$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+								$headers .= 'From: <'.$from.'>' . "\r\n";
 
-									wp_mail( $to, $subject, $message, $headers );
-									// return the new ID
-									return $post_id;
-								}
-								  
-								add_filter('acf/pre_save_post' , 'my_pre_save_post' );
-							?>
-						</div>
-						<div class="button_wrap">
-							<div id = "button1" class = "button" onclick = "setForm()">
-								NEXT							
+								wp_mail( $to, $subject, $message, $headers );
+								// return the new ID
+								return $post_id;
+							}
+							
+							add_filter('acf/pre_save_post' , 'my_pre_save_post' );
+						?>
+						<div class="grid">
+							<div class="col-desk-12 col-mob-4 site-social">
+								<div id="button1" class="button" style="padding-right: " onclick="setForm()">Next</div>
 							</div>
 						</div>
 					</div>												
