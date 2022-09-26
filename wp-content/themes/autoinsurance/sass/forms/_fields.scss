@@ -17,7 +17,7 @@ textarea {
     width: 100%;
     color: $color__text-input;
     border: 1px solid $color__border-input;
-    border-radius: 3px;
+    border-radius: .25rem;
     padding: 3px;
     &:focus {
         color: $color__text-input-focus;
@@ -75,9 +75,12 @@ textarea {
     }
 }
 
-.acf-form-fields .acf-field-group .acf-label label {
+.acf-form-fields .acf-field-group .acf-label label,
+.acf-add-vehicles .acf-th label {
     font-weight: 700 !important;
     font-size: 16px !important;
+    color: $color__secondary !important;
+    margin: .75rem 0 1rem 0;
 }
 
 .acf-form-fields .acf-field-group .acf-input label {
@@ -96,6 +99,26 @@ textarea {
     color: $color__secondary !important;
 }
 
+.acf-add-vehicles .acf-label label {
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    color: $color__secondary !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.acf-add-vehicles>.acf-label {
+    display: block;
+    border-radius: 4px;
+    background-color: #f4f6f9;
+    border: 1px solid #ececec;
+    padding: 1rem;
+}
+
+.acf-add-vehicles .acf-label .description {
+    font-size: 14px !important;
+}
+
 .acf-row-handle {
     display: none !important;
 }
@@ -104,4 +127,8 @@ textarea {
 .acf-table>thead>tr>th,
 .acf-table>tbody>tr>td {
     border: 0 !important;
+}
+
+.acf-fields>.acf-field {
+    border-top: 0 !important;
 }

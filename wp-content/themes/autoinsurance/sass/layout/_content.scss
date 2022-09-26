@@ -70,10 +70,18 @@
 .acf-actions {
     text-align: center !important;
     .acf-button {
+        margin-top: 1rem !important;
+        text-decoration: none;
         font-weight: bold;
-        color: #444 !important;
-        border: none;
-        background: none;
+        border-radius: 4px !important;
+        color: #fff !important;
+        border: 1px solid $color__primary !important;
+        background: $color__primary !important;
+        &:hover {
+            color: $color__primary !important;
+            text-decoration: none !important;
+            background-color: transparent !important;
+        }
     }
 }
 
@@ -111,6 +119,13 @@
     }
 }
 
+.form-controls {
+    display: block;
+    border-radius: 4px;
+    background-color: #f4f6f9;
+    border: 1px solid #ececec;
+}
+
 .form-arrow,
 .form-title,
 .form-page {
@@ -121,9 +136,10 @@
 
 .form-arrow {
     justify-content: left;
-    .material-icons {
+    .material-symbols-outlined {
         cursor: pointer;
         color: $color__link;
+        font-size: 2.4rem;
         &:hover {
             color: $color__link-hover;
         }
@@ -167,6 +183,5 @@
 }
 
 .disclaimer {
-    padding: 24px 16px;
-    font-size: 9px;
+    font-size: .65rem;
 }

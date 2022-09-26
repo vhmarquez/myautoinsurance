@@ -19,17 +19,19 @@ get_header();
 	<main id="main" class="site-main" >
 		<div id = "id_hero" class="section hero-section" >
 			<div class="grid" >
-				<div id="id_col2" class="col-desk-8 col-mob-4 middle">
+				<div id="id_col2" class="col-desk-8 col-mob-3 middle">
 					<div id="form1" class="">
-						<div class="grid">
-							<div class="form-arrow col-desk-4 col-mob-1">
-								<span id="id_back" class="material-icons button1 hidden" onclick="setFormState(0)" title="Previous Page"> chevron_left </span>
-							</div>
-							<div class="form-title col-desk-4 col-mob-2">
-								<!-- <h4 id="id_step1" onclick="setCallState(1)" style="margin: 0;">Step 1: Fill Out a Short Form</h4> -->
-							</div>
-							<div class="form-page col-desk-4 col-mob-1">
-								<div id="id_page" class="page_number">page 1/4</div>
+						<div class="form-controls">
+							<div class="grid">
+								<div class="form-arrow col-desk-4 col-mob-1">
+									<span id="id_back" class="material-symbols-outlined button1 hidden" onclick="setFormState(0)" title="Previous Page">arrow_circle_left</span>
+								</div>
+								<div class="form-title col-desk-4 col-mob-1">
+									<h4 id="id_step1" onclick="setCallState(1)" style="margin: 0;">Fill Out a Short Form</h4>
+								</div>
+								<div class="form-page col-desk-4 col-mob-1">
+									<div id="id_page" class="page_number">page 1/4</div>
+								</div>
 							</div>
 						</div>
 							<?php
@@ -111,42 +113,32 @@ get_header();
 							add_filter('acf/pre_save_post' , 'my_pre_save_post' );
 						?>
 						<div class="grid">
-							<div class="col-desk-12 col-mob-4 site-social">
-								<div id="button1" class="button" style="padding-right: " onclick="setForm()">Next</div>
+							<div class="col-desk-8 col-mob-3">
+								<div class="disclaimer">
+									<p><strong>Disclaimer:</strong> submitting your information on our website we confirm that your information will only be used for our network of brokers for the quotes you specifically requested.  Information will never be sold to a third party that is not part of our broker network and all information will stay exclusively in our network.  In exchange you agree our brokers will reach out regarding the quotes requested even if you are on dnc lists, but will only receive calls from our network.</p>
+								</div>
+							</div>
+							<div class="col-desk-4 col-mob-3 site-social">
+								<div id="button1" class="button" onclick="setForm()" style="display: flex; justify-content: center;">
+									<span style="line-height: 1.5; padding-right: 6px;">Next</span> 
+									<span class="material-symbols-outlined">arrow_circle_right</span>
+								</div>
 							</div>
 						</div>
-					</div>												
-					<div class="disclaimer">
-						When submitting your information on our website we confirm that your information will only be used for our network of brokers for the quotes you specifically requested.  Information will never be sold to a third party that is not part of our broker network and all information will stay exclusively in our network.  In exchange you agree our brokers will reach out regarding the quotes requested even if you are on dnc lists, but will only receive calls from our network.
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="section bg-blue">
+		<section class="section site-sub-header bg-blue">
 			<div class="grid">
-				<div class="col-desk-2 col-mob-2">
-					<img class="middle" src="/wp-content/themes/autoinsurance/images/insurance-logos/aaa-white.png" alt="AAA" />
-				</div>
-				<div class="col-desk-2 col-mob-2">
-					<img class="middle" src="/wp-content/themes/autoinsurance/images/insurance-logos/progresssive-white.png" alt="Progressive" />
-				</div>
-				<div class="col-desk-2 col-mob-2">
-					<img class="middle" src="/wp-content/themes/autoinsurance/images/insurance-logos/allstate-white.png" alt="Allstate" />
-				</div>
-				<div class="col-desk-2 col-mob-2">
-					<img class="middle" src="/wp-content/themes/autoinsurance/images/insurance-logos/state-farm-white.png" alt="State Farm" />
-				</div>
-				<div class="col-desk-2 col-mob-2">
-					<img class="middle" src="/wp-content/themes/autoinsurance/images/insurance-logos/usaa-white.png" alt="USAA" />
-				</div>
-				<div class="col-desk-2 col-mob-2">
-					<img class="middle" src="/wp-content/themes/autoinsurance/images/insurance-logos/travelers-white.png" alt="Travelers" />
+				<div class="col-desk-12 col-mob-3">
+					<h2 class="center">Shop Affordable Car Insurance</h2>
 				</div>
 			</div>
-		</div>
+		</section>
 		<div class="section">
 			<div class="grid">				
-				<div class="col-desk-4 col-mob-4">
+				<div class="col-desk-4 col-mob-3">
 					<h3>Why our two step process?</h3>
 					<ol>
 						<li><b>Fill a short form:</b> Each broker specializes in different types of coverages, with a little info we can greatly narrow down your choices.</li>
@@ -154,7 +146,7 @@ get_header();
 					</ol>
 
 				</div>
-				<div class="col-desk-4 col-mob-4">
+				<div class="col-desk-4 col-mob-3">
 					<h3>Why Us?</h3>
 					<p>We help you get the coverage that you need, without the gimmicks from
 						typical insurance brokers. 
@@ -163,7 +155,7 @@ get_header();
 						network of trusted and vetted brokers, to find you the absolute best price without compromising
 						coverage.</p>
 				</div>
-				<div class="col-desk-4 col-mob-4">
+				<div class="col-desk-4 col-mob-3">
 					<h3>Why not just go directly to a broker?</h3>
 					<p>Many times, an insurance broker may not offer the product or the price for your needs and can
 						attempt to alter your coverage to make a sale. 

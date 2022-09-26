@@ -18,7 +18,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&family=Roboto:300,400,700,900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 	<?php wp_head(); ?>
 </head>
@@ -30,10 +30,10 @@
 
 	<header id="masthead" class="site-header">
 		<div class="grid">
-			<div class="site-branding col-desk-4 col-mob-4">
+			<div class="site-branding col-desk-4 col-mob-3">
 				
 			</div>
-			<div class="site-cta col-desk-4 col-mob-4">
+			<div class="site-cta col-desk-4 col-mob-3">
 				<?php
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) :
@@ -51,7 +51,7 @@
 					<p class="site-description"><?php echo $autoinsurance_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 				<?php endif; ?>
 			</div>
-			<div class="site-social col-desk-4 col-mob-4">
+			<div class="site-social col-desk-4 col-mob-3">
 			</div>
 			<!-- .site-branding -->
 
@@ -69,12 +69,27 @@
 		</div>
 	</header><!-- #masthead -->
 
-	<section class="section site-sub-header bg-blue">
+	<div class="section bg-blue">
 		<div class="grid">
-			<div class="col-desk-12 col-mob-4">
-				<h2 class="center">Shop Affordable Car Insurance</h2>
+			<div class="col-desk-2 col-mob-1">
+				<img class="middle" src="/wp-content/themes/autoinsurance/images/insurance-logos/aaa-white.png" alt="AAA" />
+			</div>
+			<div class="col-desk-2 col-mob-1">
+				<img class="middle" src="/wp-content/themes/autoinsurance/images/insurance-logos/progresssive-white.png" alt="Progressive" />
+			</div>
+			<div class="col-desk-2 col-mob-1">
+				<img class="middle" src="/wp-content/themes/autoinsurance/images/insurance-logos/allstate-white.png" alt="Allstate" />
+			</div>
+			<div class="col-desk-2 col-mob-1">
+				<img class="middle" src="/wp-content/themes/autoinsurance/images/insurance-logos/state-farm-white.png" alt="State Farm" />
+			</div>
+			<div class="col-desk-2 col-mob-1">
+				<img class="middle" src="/wp-content/themes/autoinsurance/images/insurance-logos/usaa-white.png" alt="USAA" />
+			</div>
+			<div class="col-desk-2 col-mob-1">
+				<img class="middle" src="/wp-content/themes/autoinsurance/images/insurance-logos/travelers-white.png" alt="Travelers" />
 			</div>
 		</div>
-	</section>
+	</div>
 
 	<div id="content" class="site-content">
