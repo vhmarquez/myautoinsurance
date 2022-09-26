@@ -55,7 +55,7 @@ get_header();
 										'kses' => true,
 										'submit_value' => 'Submit Application',
 										'updated_message' => _("Thanks for submitting your application"),
-										'return' => '/redirect/'
+										'return' => add_query_arg('updated', true, home_url())
 									)
 								);
 
@@ -81,29 +81,13 @@ get_header();
 									'DoB: '.$fields[4]->$value.'<br>'.
 									'Address: '.$fields[5]->$value.'<br>'.
 									'<br>';
-									// 'Vehicles and Drivers'.'<br>'.
-									// 'Vehicles: '.$vehicles.'<br>'.
-									// 'Drivers: '.$data->d_first_name.' '.$data->d_last_name.'<br>'.
-									// '<br>'.
-									// 'Extra Information<br>'.
-									// 'Accidents within the last 3 years: '.$option_accidents[$data->accidents].'<br>'.
-									// 'Current DUI\'s, FR44, or SR22: '.$option_dui[$data->dui].'<br>'.
-									// 'Current Insurance Company: '.$option_insurance[$data->current_insurance].'<br>'.
-									// 'Insured for more than a year?: '.$option_insured[$data->insured].'<br>'.
-									// 'Marital Status: '.$option_marital[$data->marital_status].'<br>'.
-									// 'Do you rent or own your home?: '.$option_rent[$data->rent].'<br>'.
-									// 'Home Property Type: '.$option_home[$data->home_type].'<br>'.
-									// 'Credit Rating: '.$option_credit[$data->credit].'<br>'.
-									// 'Personal Liabiliy: '.$option_liability [$data->liability].'<br>';
 
-								// echo json_encode($message);
-
-								$subject = "New Lead";
-								$to = "sleep@knights.ucf.edu";
-								$from = "help@myfloridaauto.com";
-								$headers = "MIME-Version: 1.0" . "\r\n";
-								$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-								$headers .= 'From: <'.$from.'>' . "\r\n";
+									$subject = "New Lead";
+									$to = "sleep@knights.ucf.edu";
+									$from = "help@myfloridaauto.com";
+									$headers = "MIME-Version: 1.0" . "\r\n";
+									$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+									$headers .= 'From: <'.$from.'>' . "\r\n";
 
 								wp_mail( $to, $subject, $message, $headers );
 								// return the new ID
