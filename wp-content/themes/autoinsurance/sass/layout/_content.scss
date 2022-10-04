@@ -58,13 +58,15 @@
     }
 }
 
-.acf-jon {
-    float: left;
-    width: 50%;
-    clear: none !important;
-    height: 96px;
-    border-top: none !important;
-    border-bottom: 1px !important;
+@media screen and (min-width: 993px) {
+    .acf-jon {
+        float: left;
+        width: 50%;
+        clear: none !important;
+        height: 96px;
+        border-top: none !important;
+        border-bottom: 1px !important;
+    }
 }
 
 .acf-actions {

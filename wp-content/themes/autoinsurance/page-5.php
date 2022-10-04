@@ -55,7 +55,7 @@ get_header();
 										'kses' => true,
 										'submit_value' => 'Submit Application',
 										'updated_message' => _("Thanks for submitting your application"),
-										'return' => add_query_arg('updated', true, home_url())
+										'return' => '/?page_id=209'
 									)
 								);
 
