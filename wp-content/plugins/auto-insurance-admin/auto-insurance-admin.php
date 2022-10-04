@@ -35,8 +35,9 @@ add_filter('manage_auto-lead_posts_columns', function($columns) {
 		'first_name' => __('First Name'),
 		'last_name' => __('Last Name'),
 		'e-mail_address' => __('E-Mail Address'),
-		'date_of_birth' => __('Date of Birth')
-
+		'date_of_birth' => __('Date of Birth'),
+		'credit_score' => __('Credit Score'),
+		'contact_status' => __('Contact Status')
 	);
     
 	return $columns;
@@ -87,6 +88,28 @@ add_action('manage_auto-lead_posts_custom_column', function($column, $post_id) {
 			_e('n/a');
 		} else {
 			echo $dob;
+		}
+	}
+
+	if('credit_score' === $column) {
+		
+		$cs = get_post_meta($post_id, 'financial_information_credit_rating', true);
+
+		if(!$cs) {
+			_e('n/a');
+		} else {
+			echo $cs;
+		}
+	}
+
+	if('contact_status' === $column) {
+		
+		$status = get_post_meta($post_id, 'management_contact_status', true);
+
+		if(!$status) {
+			_e('n/a');
+		} else {
+			echo $status;
 		}
 	}
 

@@ -178,3 +178,29 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function my_admin_only_render_field_settings( $field ) {
+    acf_render_field_setting( $field, array(
+        'label'        => __( 'Admin Only?', 'my-textdomain' ),
+        'instructions' => '',
+        'name'         => 'admin_only',
+        'type'         => 'true_false',
+        'ui'           => 1,
+    ), true ); // If adding a setting globally, you MUST pass true as the third parameter!
+}
+add_action( 'acf/render_field_settings', 'my_admin_only_render_field_settings' );
+
+function my_admin_only_prepare_field( $field ) {
+    // Bail early if no 'admin_only' setting or if set to false.
+    if ( empty( $field['admin_only'] ) ) {
+        return $field;
+    }
+
+    // Prevent field from displaying if current user is not an admin.
+    if ( ! current_user_can( 'manage_options' ) ) {
+        return false;
+    }
+
+    // Return the original field otherwise.
+    return $field;
+}
+add_filter( 'acf/prepare_field', 'my_admin_only_prepare_field' );

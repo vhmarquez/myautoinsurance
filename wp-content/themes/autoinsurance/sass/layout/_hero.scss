@@ -7,16 +7,17 @@
     height: 60vh;
     background-size: cover;
     h1 {
-        display: inline-block;
-        font-size: 24px;
-        background-color: rgba(255, 255, 255, .8);
-        color: #0a1e56 !important;
-        padding: 0 1em;
-        border-radius: 40px;
+        color: #006dcc;
     }
-    &.interior {
-        background-size: cover !important;
-        height: 40vh;
+}
+
+.hero-section {
+    padding: 4em 0 !important;
+    input[type="submit"] {
+        width: 100%;
+    }
+    ul {
+        color: #fff;
     }
 }
 
