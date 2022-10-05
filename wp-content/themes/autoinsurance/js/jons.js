@@ -71,15 +71,15 @@ function startApp() {
     });
 
     // Preset contact info for testing values
-    grp1[0].value = 'First Name';
-    grp1[1].value = 'Last Name';
-    grp1[2].value = 'helloworld@gmail.com';
-    grp1[3].value = '(555) 555-5555';
-    grp1[4].value = '20220101';
-    grp1[5].value = 'January 01, 2022';
-    grp1[6].value = 'Boardwalk';
-    grp1[7].value = 'Monopoly';
-    grp1[8].value = '99999';
+    // grp1[0].value = 'First Name';
+    // grp1[1].value = 'Last Name';
+    // grp1[2].value = 'helloworld@gmail.com';
+    // grp1[3].value = '(555) 555-5555';
+    // grp1[4].value = '20220101';
+    // grp1[5].value = 'January 01, 2022';
+    // grp1[6].value = 'Boardwalk';
+    // grp1[7].value = 'Monopoly';
+    // grp1[8].value = '99999';
 
     checkActive(1); // Initialize the Next button
 
