@@ -65,7 +65,7 @@ function addTrack(){
                     
         }
     }
-    console.log('PARAMS: '+params);
+    // console.log('PARAMS: '+params);
     fetch(path+"track.php", {
         method: "POST",
         headers: {
@@ -73,8 +73,7 @@ function addTrack(){
         },
         body: `ipaddr=${ip_addr}&duration=${duration}&page=${form_ind}`+params,
       })
-      .then((response) => response.text())
-      .then((res) => (console.log('Track Updated '+ res)));
+      .then((response) => response.text());
 
 }
 

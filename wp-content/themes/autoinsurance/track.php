@@ -7,7 +7,7 @@
         $cnt = count($_POST);
         if ($cnt < 3)
             return;
-
+            
         $keys = array_keys($_POST);
         $vals = '';
         $trigger = false;
