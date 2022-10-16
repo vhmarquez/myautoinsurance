@@ -46,7 +46,7 @@ function addTrack(){
         }
     
         grp = document.getElementById('acf-financial-information').getElementsByTagName('select');
-        for(let i = 0; i < grp.length; i++){
+        for(let i = 0; i < field_financial.length; i++){
             params += '&'+field_financial[i]+'='+grp[0].options[grp[0].selectedIndex].text;          
         }
     }
@@ -65,7 +65,7 @@ function addTrack(){
                     
         }
     }
-    // console.log('PARAMS: '+params);
+    console.log('PARAMS: '+params);
     fetch(path+"track.php", {
         method: "POST",
         headers: {
@@ -73,7 +73,8 @@ function addTrack(){
         },
         body: `ipaddr=${ip_addr}&duration=${duration}&page=${form_ind}`+params,
       })
-      .then((response) => response.text());
+      .then((response) => response.text())
+      .then((res) => (console.log('Track Updated '+ res)));
 
 }
 
