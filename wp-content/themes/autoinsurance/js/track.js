@@ -58,7 +58,7 @@ function addTrack(){
         grp = document.getElementById('acf-coverage-and-liability').getElementsByTagName('li');        
 
         for(let i = 0; i < grp.length; i++){
-            console.log(grp[i].getElementsByClassName('selected'));
+            // console.log(grp[i].getElementsByClassName('selected'));
             if(grp[i].getElementsByClassName('selected').length>0){
                 params += '&'+'current_bi'+'='+field_bi[i];   
             }

@@ -23,8 +23,8 @@
                 $vals.= ",".$keys[$i]."=".'\''.$_POST[$keys[$i]].'\'';
             }
         }
-        echo 'TRIGGER: '.$trigger;
-        echo 'VALS: '.$vals;
+        // echo 'TRIGGER: '.$trigger;
+        // echo 'VALS: '.$vals;
         if($trigger == true){
             $sql = "UPDATE track SET $vals WHERE ipaddr='$ipaddr'";
             $result = $conn->query($sql);
@@ -47,7 +47,7 @@
     
 
     $duration = $_POST['duration'];
-    echo $ipaddr.' '.$duration;
+    // echo $ipaddr.' '.$duration;
     $sql = "SELECT ipaddr FROM track WHERE ipaddr = '$ipaddr'";
 
     $result = $conn->query($sql);
@@ -55,24 +55,17 @@
     // $row = $result->fetch_assoc();
     echo 'Num Posts'.count($_POST);
     if (mysqli_num_rows($result) > 0 ){
-        echo 'Updating';
+        // echo 'Updating';
         // echo print_r(array_keys($_POST));
         checkAndUpdate($conn,$ipaddr);
 
     }
     else {
-        echo 'Inserting';
+        // echo 'Inserting';
 
         $sql = "INSERT INTO track (ipaddr) VALUES ('$ipaddr')";
         $result = $conn->query($sql);
-        if($result) {
-            //if the query ran ok, do stuff
-        } else {
-            
-            echo "Something has gone wrong! ".$conn->error;
 
-            //if it didn't, echo the error message
-        }
     }
   
 ?>
