@@ -1,10 +1,14 @@
 <?php
     
 	// This file adds a new lead into the system
+	// $servername = "localhost";
+	// $username = "root";
+	// $password = "";
+	// $dbname = "myflautoinsurance";
 	$servername = "localhost";
-	$username = "JonnyBoy";
-	$password = "GYQoq1F48U7uY769";
-	$dbname = "auto_insurance";
+	$username = "admin";
+	$password = "FLinsurance2021!";
+	$dbname = "myflautoinsurance";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);

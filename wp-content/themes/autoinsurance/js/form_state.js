@@ -28,7 +28,6 @@ function checkActive(num){
 			}
 			break;
 		case 2:
-			console.log('BAM');
 			if(v_year.value == null || v_year.value == "")
 				err = 1;
 			else if(v_year.value < 1920) { // min bound
