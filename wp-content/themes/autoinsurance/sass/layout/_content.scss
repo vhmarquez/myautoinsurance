@@ -181,9 +181,33 @@
 
 // Block elements
 .hidden {
-    display: none;
+    display: none !important; 
 }
 
 .disclaimer {
     font-size: .65rem;
+}
+
+// Registration Page
+.register {
+	margin: 32px auto;
+	max-width: 464px;
+	min-width: 300px;
+    border: 1px solid #aaa;
+	border-radius: 16px;
+    padding: 16px;
+	.holder {
+		overflow: hidden;
+    	padding: 8px 0;
+		a {
+			margin: 4px;
+		}
+		
+		.clickable {
+			&:hover {
+				cursor: pointer;
+				font-weight: bold;
+			}
+		}
+	}
 }

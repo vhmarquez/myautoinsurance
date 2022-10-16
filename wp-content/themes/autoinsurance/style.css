@@ -1110,10 +1110,29 @@ textarea {
   margin-bottom: 16px;
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 .disclaimer {
   font-size: 0.65rem;
+}
+.register {
+  margin: 32px auto;
+  max-width: 464px;
+  min-width: 300px;
+  border: 1px solid #aaa;
+  border-radius: 16px;
+  padding: 16px;
+}
+.register .holder {
+  overflow: hidden;
+  padding: 8px 0;
+}
+.register .holder a {
+  margin: 4px;
+}
+.register .holder .clickable:hover {
+  cursor: pointer;
+  font-weight: bold;
 }
 .container {
   position: relative;
